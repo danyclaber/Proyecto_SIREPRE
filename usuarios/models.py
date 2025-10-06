@@ -87,7 +87,7 @@ class PerfilOperador(models.Model):
 
     class Meta:
         verbose_name = "Operador"
-        verbose_name_plural = "Informacion  de Operadores"
+        verbose_name_plural = "Informacion Operadores"
     
     ci = models.CharField(max_length=20, primary_key=True)
     usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE, related_name="perfil_operador")
@@ -132,7 +132,7 @@ class Acta(models.Model):
 
     class Meta:
         verbose_name = "Actas Operador"
-        verbose_name_plural = "Actas Operadores"
+        verbose_name_plural = "Actas Asignadas"
 
     operador = models.OneToOneField(
         PerfilOperador,       # Relación 1 a 1
@@ -223,8 +223,8 @@ class Actividad(models.Model):
 # -------------------
 class ObservacionAdicional(models.Model):
     class Meta:
-        verbose_name = "observación adicional"
-        verbose_name_plural = "observaciones Adicionales Operadores"
+        verbose_name = "observación adicional Operador"
+        verbose_name_plural = "observaciones Operadores"
 
     operador = models.ForeignKey(
         PerfilOperador,   # Relación con el operador
@@ -251,8 +251,8 @@ class ObservacionAdicional(models.Model):
 class DetalleAdicional(models.Model):
 
     class Meta:
-        verbose_name = "Detalle Adicional"
-        verbose_name_plural = "Detalles Adicionales Operadores"
+        verbose_name = "Detalle Adicional Operador"
+        verbose_name_plural = "Detalles Operadores"
 
     operador = models.OneToOneField(
         'PerfilOperador',
