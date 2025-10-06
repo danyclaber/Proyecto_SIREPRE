@@ -21,3 +21,16 @@ El objetivo principal del sistema es centralizar la información de los operador
 - **Exportación de Datos:** Generación de reportes en Excel de operadores, actas y observaciones, con la posibilidad de realizar consultas personalizadas mediante SQL y exportarlas.
   
 - **Panel de Administración Personalizado:** Interfaz de Django Admin adaptada con mejoras de usabilidad, incorporando múltiples filtros de búsqueda para facilitar la localización rápida y precisa de los registros.
+
+---
+### 📋 Vista previa de algunas secciones
+---
+
+![Vista previa del proyecto](screenshots/vistaPrevia1.png)
+
+---
+![Vista previa del proyecto](screenshots/vistaPrevia2.png)
+
+---
+![Vista previa del proyecto](screenshots/vistaPrevia3.png)
+
