@@ -31,6 +31,4 @@ El objetivo principal del sistema es centralizar la información de los operador
 ---
 ![Vista previa del proyecto](screenshots/vistaPrevia2.png)
 
----
-![Vista previa del proyecto](screenshots/vistaPrevia3.png)
 
