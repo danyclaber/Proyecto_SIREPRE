@@ -1,0 +1,59 @@
+Resumen de Creación del Proyecto Django
+1.Creación del entorno virtual --> Esto permite instalar librerías de Python de manera aislada, sin afectar otros proyectos ni el sistema global.
+python -m venv .env
+Activar --> .env\Scripts\activate
+
+2. Instalación de Django y dependencias --> estructura básica del proyecto:
+django-admin startproject proyecto_sirepre
+cd proyecto_sirepre
+
+3. Creación de aplicaciones ---> Las aplicaciones permiten organizar funcionalidades específicas dentro del proyecto de manera modular.
+python manage.py startapp usuarios
+
+4. Configuración de la base de datos
+Se configuró PostgreSQL en settings.py:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nombre_bd',
+        'USER': 'usuario_bd',
+        'PASSWORD': 'contraseña',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+5. Se aplicaron las migraciones para crear las tablas en la base de datos:
+python manage.py makemigrations
+python manage.py migrate
+
+6. Creación de superusuario
+Se generó un usuario administrador para acceder al panel de Django Admin:
+python manage.py createsuperuser
+
+7. Finalmente, se levantó el servidor de desarrollo de Django:
+python manage.py runserver
+
+
+
+DETALLES PARA ENTENDER DJANGO
+
+Models: Los models en Django representan las tablas de la base de datos. Cada clase define los campos y tipos de datos, y las relaciones entre tablas mediante ForeignKey, OneToOneField o ManyToManyField. Cada instancia de un model es un registro en la base de datos.
+
+Admin: El admin de Django es una interfaz web lista para usar que permite crear, leer, actualizar y eliminar registros de los modelos. Se pueden personalizar las columnas que se muestran, los filtros, las búsquedas y las acciones en lote.
+
+Views: Las views son funciones o clases que reciben solicitudes HTTP, procesan datos y devuelven respuestas HTTP. Pueden devolver HTML, JSON u otros formatos, y son el intermediario entre los modelos y las plantillas.
+
+URLs: Las URLs conectan las rutas del navegador con las views. Cada URL definida en urls.py apunta a una view que maneja la solicitud correspondiente.
+
+Templates: Las templates son archivos HTML que permiten mostrar datos de forma dinámica usando el lenguaje de plantillas de Django. Se integran con CSS y JavaScript para el diseño y la interactividad.
+
+ORM: El ORM (Object-Relational Mapping) traduce operaciones en Python a consultas SQL, facilitando la interacción con la base de datos sin escribir SQL manual. Permite filtrar, crear, actualizar y eliminar registros de manera sencilla y segura.
+
+Flujo de Django: Cuando un usuario hace una petición HTTP, Django verifica la URL, llama a la view correspondiente, la view consulta los models usando el ORM y pasa los datos a un template o respuesta. Finalmente, se envía la respuesta al navegador.
+
+Resumen Admin-Models-ORM: Los models representan la base de datos, el admin permite gestionarlos visualmente, el ORM traduce las operaciones a SQL y las views con templates muestran los datos al usuario final.
+
+
+
+
