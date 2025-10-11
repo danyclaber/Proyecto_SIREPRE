@@ -1,0 +1,40 @@
+# Entorno virtual
+.env/
+venv/
+ENV/
+
+# Archivos del sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Archivos temporales de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Variables de entorno
+*.env
+.env.local
+.env.*.local
+
+# Migraciones (opcional)
+*/migrations/
+!*/migrations/__init__.py
+
+# Base de datos local
+db.sqlite3
+
+# Logs y caché
+*.log
+*.pot
+*.pyc
+*.mo
+*.cache
+
+# Archivos de compilación
+node_modules/
+dist/
+build/
